@@ -71,7 +71,7 @@ command to show coverage - forge coverage
 4. Cache folder - The failed test functions get stored it cache folder by default and if you want to test only test functions - forge test --rerun (this command runs only test functions which are failed)
    -> to test specific function - forge test --match-test "functionName"
 
-# Module 5
+# Module 4
 
 1. Table Testing
 
@@ -92,3 +92,17 @@ Fuzz fixtures allow you to force the fuzzer to test specific important values in
 5. Invariant Testing
 
 Invariant testing checks rules that must always remain true no matter what sequence of function calls happens. Forge randomly calls contract functions and after each call verifies that the invariant still holds. Unlike fuzz testing, which focuses on inputs and outputs of one function, invariant testing focuses on the overall system state. It is especially useful for testing protocol-level safety and correctness in complex contracts like DeFi systems.
+
+# Module 6
+
+In Ethereum smart contracts, some logic depends on time, such as auctions or vesting schedules. To test these, we use Foundry cheatcodes:
+
+vm.warp – Simulates time travel by moving the blockchain timestamp forward or backward. This allows testing time-based functions without waiting in real life.
+
+vm.expectEmit – Ensures a specific event is emitted during a transaction.
+
+Event logs – Record important actions like bids or auction endings; they are visible off-chain and used to track contract activity.
+
+Time-based logic – Contracts can enforce rules based on block.timestamp, such as only allowing bids before an auction ends or releasing funds after a certain time.
+
+Together, these concepts let developers test time-sensitive contracts efficiently, verify events are emitted correctly, and ensure all logic depending on time works as expected.
