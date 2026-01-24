@@ -106,3 +106,16 @@ Event logs – Record important actions like bids or auction endings; they are v
 Time-based logic – Contracts can enforce rules based on block.timestamp, such as only allowing bids before an auction ends or releasing funds after a certain time.
 
 Together, these concepts let developers test time-sensitive contracts efficiently, verify events are emitted correctly, and ensure all logic depending on time works as expected.
+
+# Module 7
+
+In this module we learn what exactly is OpenZeppelin and why we use it.
+It is an open source website where ready-made codes,pre built functions,contracts avilable that developer or tester
+can reuse instead of writing whole thing from scratch.
+It is used by uniswap,Ethereum Foundation etc
+it provides ERC20(fungible or interchanagble) which has many pre built functions like totalSupply(),balanaceof(),transfer(),approve(),allowance() etc and pre builts events.
+ERC20 includes approval,miniting and burning mechanism.
+Then we learned about ERC721(non-fungible NFTs) and then ERC1155(Multi-Token).
+OpenZepplin also includes Access control,security modules.
+
+Remapping.txt - file used to import lib in foundry.
